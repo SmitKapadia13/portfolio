@@ -2,9 +2,125 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smit Kapadia | Software Developer</title>
+    <meta name="description" content="Portfolio of Smit Kapadia: Python and web projects, skills and resume.">
+    <meta property="og:title" content="Smit Kapadia | Software Developer">
+    <meta property="og:description" content="Portfolio of Smit Kapadia: Python and web projects, skills and resume.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // set theme before paint → no flash
+        try {
+            var t = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.dataset.theme = t;
+        } catch (e) {}
+    </script>
 </head>
 <body>
+<header class="site-header">
+    <div class="wrap bar">
+        <a href="#home" class="logo">Smit.</a>
+        <nav id="nav" class="nav" aria-label="Main">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Resume</a>
+            <a href="#contact" class="btn ghost">Contact</a>
+        </nav>
+        <div class="tools">
+            <button id="theme-toggle" class="icon-btn" aria-label="Switch to dark theme">◐</button>
+            <button id="menu-toggle" class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">☰</button>
+        </div>
+    </div>
+</header>
 
+<main>
+    <section id="home" class="hero">
+        <div class="wrap hero-grid">
+            <div>
+                <span class="bar-accent" aria-hidden="true"></span>
+                <h1>I am Smit, a Software Developer</h1>
+                <p class="lead">I build practical tools in Python and the web, from finance automation to fraud analysis.</p>
+                <a href="#contact" class="btn primary">Let's talk</a>
+                <ul class="socials" aria-label="Social links">
+                    <li><a href="https://github.com/SmitKapadia13" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="mailto:smitkapadia13@gmail.com">Email</a></li>
+                </ul>
+            </div>
+            <div class="photo" data-initials="SK">
+                <img src="assets/images/profile.jpg" alt="Portrait of Smit Kapadia" onerror="this.remove()">
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="wrap narrow">
+            <h2>About me</h2>
+            <p>I am Smit Kapadia, a developer who enjoys turning messy real-world problems into working software. I have built projects at hackathons including the Razorpay AI Buildathon 2026 and Dominion 2026. Edit this: add your course, college and what you want to learn next.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="wrap">
+            <h2>Tech stack</h2>
+            <ul id="skills-grid" class="skills"></ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="wrap">
+            <h2>Featured projects</h2>
+            <p class="muted">Select a project to see details.</p>
+            <div id="projects-grid" class="projects"></div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="wrap narrow">
+            <h2>Resume</h2>
+            <ol class="timeline">
+                <li>
+                    <h3>Software Development Intern</h3>
+                    <p class="muted">Company name, 2026</p>
+                    <p>One line on what you built or learned.</p>
+                </li>
+                <li>
+                    <h3>B.Tech / B.Sc in Your Course</h3>
+                    <p class="muted">College name, 2023 to 2027</p>
+                    <p>Relevant coursework or achievements.</p>
+                </li>
+            </ol>
+            <a href="assets/resume.pdf" class="btn primary" download>Download resume</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="wrap narrow">
+            <h2>Contact</h2>
+            <p>Open to internships and entry-level roles. Email is the fastest way to reach me.</p>
+            <p><a class="big-link" href="mailto:smitkapadia13@gmail.com">smitkapadia13@gmail.com</a></p>
+            <ul class="socials">
+                <li><a href="https://github.com/SmitKapadia13" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">LinkedIn</a></li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="wrap"><p>&copy; <span id="year"></span> Smit Kapadia. Built with HTML, CSS and JavaScript.</p></div>
+</footer>
+
+<dialog id="modal" aria-labelledby="modal-title">
+    <button class="icon-btn close" id="modal-close" aria-label="Close project details">✕</button>
+    <div id="modal-body"></div>
+</dialog>
+
+<script src="js/main.js"></script>
 </body>
 </html>
